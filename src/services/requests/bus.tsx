@@ -29,3 +29,4 @@ export const bookTicket = async({
     });
     return data?.ticket;
 }
+

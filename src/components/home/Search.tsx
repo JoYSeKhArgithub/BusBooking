@@ -4,6 +4,7 @@ import { navigate } from '../../utils/NavigationUtils';
 import LinearGradient from 'react-native-linear-gradient';
 import { CalendarDaysIcon, MagnifyingGlassCircleIcon } from 'react-native-heroicons/solid';
 import DatePickerModel from '../ui/DatePickerModel';
+import LocationPickerModel from '../ui/LocationPickerModel';
 
 
 const Search = () => {
@@ -148,6 +149,14 @@ const Search = () => {
                     />
                 )
             }
+
+            {showLocationPicker && (<LocationPickerModel
+                visible={showLocationPicker}
+                onClose={()=> setShowLocationPicker(false)}
+                onSelect={handleLocationSet}
+                type={locationType}
+                fromLocation={from|| undefined}
+            />)}
         </View>
     )
 }

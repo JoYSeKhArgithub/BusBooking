@@ -25,7 +25,7 @@ const DatePickerModel: React.FC<DatePickerMOdelProps> = ({
                 display='default'
                 onChange={(event,date)=>{
                     if(date){
-                        onConfirm(tempDate)
+                        onConfirm(date)
                         onClose();
                     }
                 }}
